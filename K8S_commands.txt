@@ -1,1 +1,69 @@
 All commands of kubernetes
+
+1  => kubectl apply -f path of the .yaml file
+2  => kubectl port-forward svc/productpage 80:9080
+
+argocd
+
+https://argo-cd.readthedocs.io/en/stable/getting_started/
+3  => kubectl create namespace argocd
+4  => kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml 
+5  => kubectl config set-context --current --namespace=argocd
+6  => argocd login --core
+7  => argocd admin initial-password -n argocd
+8  => kubectl port-forward svc/argocd-server -n argocd 8080:443
+
+istioctl installation command
+
+https://github.com/istio/istio/releases/tag/1.24.2
+9  => istioctl install --set profile=demo
+10 => kubectl -n istio-system
+
+https://istio.io/latest/docs/examples/bookinfo/
+
+11 => kubectl label namespace default istio-injection=enabled
+12 => kubectl apply -f samples/bookinfo/platform/kube/bookinfo.yaml
+13 => kubectl apply -f samples/bookinfo/networking/bookinfo-gateway.yaml
+14 => kubectl get gateway
+15 => kubectl get svc -n istio-system
+
+http://a595ada2277ff4df7a7f9752a966ec06-1616514819.ap-south-1.elb.amazonaws.com/productpage
+
+16 => kubectl apply -f samples/bookinfo/networking/destination-rule-all.yaml
+17 => kubectl get destinationrules -o yaml
+18 => kubectl apply -f samples/addons kubectl rollout status deployment/kiali -n istio-system
+19 => kubectl -n istio-system get svc kiali
+
+curl -o /dev/null -s -w %{http_code} http://a595ada2277ff4df7a7f9752a966ec06-1616514819.ap-south-1.elb.amazonaws.com/productpage
+
+estio
+
+20 => istioctl dashboard kiali
+21 => kubectl -n istio-system get svc prometheus
+22 => istioctl dashboard prometheus
+	istio_requests_total Total count of all requests to the productpage service:
+	 istio_requests_total{destination_service="productpage.default.svc.cluster.local"}
+	 Total count of all requests to v3 of the reviews service:
+	istio_requests_total{destination_service="reviews.default.svc.cluster.local", destination_version="v3"}
+	Rate of requests over the past 5 minutes to all instances of the productpage service:
+	rate(istio_requests_total{destination_service=~"productpage.*", response_code="200"}[5m])
+	
+23 => https://prometheus.io/docs/prometheus/latest/querying/basics/
+24 => kubectl -n istio-system get svc grafana
+25 => istioctl dashboard grafana
+26 =>kubectl apply -f samples/bookinfo/networking/virtual-service-all-v1.yaml -n default
+27 => kubectl apply -f samples/bookinfo/networking/virtual-service-reviews-50-v3.yaml -n default
+28 => kubectl apply -f samples/bookinfo/networking/virtual-service-reviews-v3.yaml -n default
+
+https://istio.io/latest/docs/tasks/observability/metrics/querying-metrics/
+
+https://istio.io/latest/docs/tasks/observability/metrics/using-istio-dashboard/
+
+https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing
+
+https://istio.io/latest/docs/examples/bookinfo/
+
+https://github.com/istio/istio/tree/master/samples/bookinfo
+
+
+
