@@ -1,0 +1,31 @@
+---------------------minikube installation in ubuntu ----------------------------
+	
+1. downloade the package
+   curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+
+2. install minikube
+   sudo install minikube-linux-amd64 /usr/local/bin/minikube
+
+3. check the minikube version
+   minikube version
+
+4. start minikube in the top of docker
+   minikube start --driver=docker
+
+5. check minikube status it is running or not
+   minikube status
+
+6. display the clusters info
+   kubectl cluster-info
+
+7. display the config view
+   kubectl config view
+
+8. display the running nodes
+   kubectl get nodes
+
+9. display the pods
+   kubectl get pods
+
+10. open the dashboard of minikube on chrome
+   minikube dashboard
