@@ -1,5 +1,7 @@
 ---------------kubectl commands------------------
 
+minikube start <cluster_name>
+
 1. display the cluster info
    kubectl cluster-info
 
@@ -28,4 +30,5 @@
 9. to see the graphical interface
    minikube dashboard
 
-10. 
+10. to delete all clusters 
+    minikube delete 
