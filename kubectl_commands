@@ -1,0 +1,31 @@
+---------------kubectl commands------------------
+
+1. display the cluster info
+   kubectl cluster-info
+
+2. display cluster nodes
+   kubectl get nodes
+
+3. dosplay all info about nodes
+   kubectl describe nodes
+
+4. to display any one node info
+   kubectl describe nodes <node_name>
+
+5. create the deployment in the cluster
+   kubectl create deployment <name> --image=<image_name>
+
+6. show the deployment
+   kubectl get deployment
+
+7. scale the deployment / create the replicas in the deployment
+   kubectl scale deployment <deployment_name> --replicas=3
+	 #it will create the pods/container in the cluster
+
+8. to see the IP of pods
+   kubectl get pods -o wide
+
+9. to see the graphical interface
+   minikube dashboard
+
+10. 
