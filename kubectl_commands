@@ -31,4 +31,6 @@ minikube start <cluster_name>
    minikube dashboard
 
 10. to delete all clusters 
-    minikube delete 
+    minikube delete
+
+11.  
