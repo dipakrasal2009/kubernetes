@@ -1,0 +1,39 @@
+name: Deploy WordPress on Minikube
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Minikube
+        uses: medyagh/setup-minikube@latest
+
+      - name: Start Minikube
+        run: minikube start --driver=docker
+
+      - name: Apply Kubernetes configurations
+        run: |
+          kubectl apply -f mysql-pv.yaml
+          kubectl apply -f wordpress-pv.yaml
+          kubectl apply -f mysql-deployment.yaml
+          kubectl apply -f wordpress-deployment.yaml
+          kubectl apply -f services.yaml
+
+      - name: Wait for pods to be ready
+        run: |
+          kubectl wait --for=condition=ready pod -l app=mysql --timeout=120s
+          kubectl wait --for=condition=ready pod -l app=wordpress --timeout=120s
+
+      - name: Get WordPress Service URL
+        run: |
+          minikube service wordpress --url
+
