@@ -1,0 +1,22 @@
+setup argocd on kubernetes
+
+here is the commnands
+
+1.  create the namespace of the argocd
+    kubectl create namespace argocd
+
+2.  install the argocd 
+    kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+
+3.  install argocd cli (Optional)
+    curl -sSL -o /usr/local/bin/argocd https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
+    chmod +x /usr/local/bin/argocd
+
+4.  port forwarding 
+    kubectl port-forward svc/argocd-server -n argocd 8090:443
+
+5.  to retrive the password of argocd
+    kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.password}" | base64 --decode
+
+
+username : admin
