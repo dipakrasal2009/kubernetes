@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: mypod11
+  labels:
+    app: web
+spec:
+  containers:
+    - name: "c1"
+      image: "vimal13/apache-webserver-php"
+
+
