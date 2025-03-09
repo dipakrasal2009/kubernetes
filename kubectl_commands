@@ -33,4 +33,7 @@ minikube start <cluster_name>
 10. to delete all clusters 
     minikube delete
 
-11.  
+11. to create the namespace
+    kubectl create namespace <name>
+
+12.  
