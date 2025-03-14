@@ -36,4 +36,29 @@ minikube start <cluster_name>
 11. to create the namespace
     kubectl create namespace <name>
 
-12.  
+12.
+
+
+
+minikube status
+ 2015  kubectl create -f myrc1.yml 
+ 2016  kubectl get rc
+ 2017  kubectl get po
+ 2018  kubectl apply -f myrc1.yml 
+ 2019  kubectl get rc
+ 2020  kubectl get pods --show-labels
+ 2021  ls
+ 2022  kubectl 
+ 2023  kubectl get pods
+ 2024  kubectl get pods --show-labels
+ 2025  history | tail -50
+
+
+
+ 2002  kubectl create -f label.yml 
+ 2003  kubectl get po
+ 2004  kubectl describe pods
+ 2005  kubectl get pods --show-labels
+ 2006  kubectl get pods --selector app=web
+ 2007  touch myrc1.yml
+  
