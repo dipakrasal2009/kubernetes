@@ -1,23 +1,31 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: v1
+
+kind: Pod
+
 metadata:
-  name: nginx-deployment
+
+  name: rss-site
+
+  labels:
+
+    app: web
+
 spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: nginx
-  template:
-    metadata:
-      labels:
-        app: nginx
-    spec:
-      containers:
-      - name: nginx
-        image: nginx:latest
-        ports:
+
+  containers:
+
+    - name: front-end
+
+      image: nginx
+
+      ports:
+
         - containerPort: 80
-      volumes:
-      - name: data
-        persistentVolumeClaim:
-          claimName: my-pvc 
+
+    - name: rss-reader
+
+      image: nickchase/rss-php-nginx:v1
+
+      ports:
+
+        - containerPort: 88
