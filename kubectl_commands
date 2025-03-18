@@ -62,3 +62,8 @@ minikube status
  2006  kubectl get pods --selector app=web
  2007  touch myrc1.yml
   
+
+
+18 march 
+services
+loade balancing
