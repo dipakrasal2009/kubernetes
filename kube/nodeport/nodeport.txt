@@ -1,0 +1,41 @@
+ 𝗞𝗲𝘆 𝗧𝗮𝗸𝗲𝗮𝘄𝗮𝘆𝘀 𝗳𝗿𝗼𝗺 𝗞𝘂𝗯𝗲𝗿𝗻𝗲𝘁𝗲𝘀 Training 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 𝟲 - 𝟭𝟴𝘁𝗵 𝗠𝗮𝗿𝗰𝗵 𝟮𝟬𝟮𝟱
+----------------------------------------------------------------------
+
+🌐 Understanding Kubernetes Services: Services in Kubernetes serve two primary purposes:
+🔹 Load balancing across multiple pods.
+🔹 Exposing pods to external traffic for connectivity.
+
+📝 Pod Creation & YAML Configuration:
+🔹 Kubernetes uses YAML files to define pod specifications.
+🔹 The kubectl apply command is used to create pods.
+
+🔍 Pod Connectivity:
+🔹 Pods have internal connectivity but are isolated from external traffic.
+🔹 Using kubectl exec, we can attach to a pod and inspect its IP address.
+
+🔗 Service Types in Kubernetes:
+🔹 Public Services (NodePort): Expose pods to external traffic.
+🔹 Private Services (ClusterIP): Keep pods accessible only within the cluster.
+
+🚀 Service Functionality & Load Balancing:
+🔹 Services act as a gateway between external users and pods.
+🔹 Kubernetes services use labels and selectors to automatically discover and connect to new pods.
+🔹 Load balancing ensures even distribution of traffic across multiple pods.
+
+📡 NodePort & External Access:
+🔹 Services use NodePort to allow external access by assigning a port on the worker node.
+🔹 The kube-proxy component routes requests between external clients and pods.
+🔹 Services function as a reverse proxy, forwarding traffic to appropriate pods.
+
+📌 Topics Covered:
+✅ Pod Creation & YAML Configurations
+✅ Service Types & Connectivity
+✅ Load Balancing & Traffic Management
+✅ NodePort & External Access
+✅ Auto Discovery of New Pods
+
+✨ Outcome:
+🔹 Gained a deep understanding of Kubernetes services and their role in networking.
+🔹 Learned how to expose pods externally and manage traffic flow.
+🔹 Explored the role of kube-proxy and NodePort in service connectivity.
+🔹 Understood the importance of labels and selectors in auto-discovery.
