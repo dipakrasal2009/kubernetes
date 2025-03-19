@@ -1,0 +1,54 @@
+NodePort Access Commands
+-------------------------
+
+
+ 2010  kubectl get pods
+ 2011  kubectl expose pods mypod2 --type NodePort --target-port=80 --port=1234
+ 2012  kubectl get pods -o wide
+ 2013  kubectl  get svc
+ 2014  kubectl describe  svc mypod2
+ 2015  minikube ip
+ 2016  curl http://192.168.85.2:31002/
+--------------------------------------------------
+
+2001  minikube status
+ 2002  minikube start
+ 2003  cd Desktop/github/kubernetes/kube/
+ 2004  ls
+ 2005  vim myapp.yml
+ 2006  ls
+ 2007  kubectl create -f myapp.yml 
+ 2008  kubectl get pods
+ 2009  kubectl get nodes
+ 2010  minikube ip
+ 2011  ping 192.168.85.2
+ 2012  ls
+ 2013  cat myapp.yml 
+ 2014  kubectl describe pods
+ 2015  kubectl get po
+ 2016  kubectl delete rss-site
+ 2017  kubectl delete podsrss-site
+ 2018  kubectl delete pod rss-site
+ 2019  kubectl get pods
+ 2020  kubectl get pods -o wide
+ 2021  ping 10.244.0.21
+ 2022  curl 10.244.0.21
+ 2023  curl http://10.244.0.21
+ 2024  kubectl get pods
+ 2025  kubectl exec -it mypod2 -- bash
+ 2026  kubectl get svc
+ 2027  kubectl get pods
+ 2028  kubectl get nodes
+ 2029  kubectl describe node mypod2
+ 2030  kubectl describe po mypod2
+ 2031  ls
+ 2032  git status
+ 2033  git add .
+ 2034  git status
+ 2035  git commit -m "myapp.yml is creating fot the nodeport"
+ 2036  git status
+ 2037  git push
+ 2038  ls
+ 2039  vim NodePort
+ 2040  history | tail -50
+
