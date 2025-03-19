@@ -1,0 +1,182 @@
+ 1995  vim kubectl_commands 
+ 1996  git status
+ 1997  git add .
+ 1998  git status
+ 1999  git commit -m "add some commands in this file"
+ 2000  git push
+ 2001  ping 10.244.0.21
+ 2002  kubectl get svc
+ 2003  ping 10.96.0.1
+ 2004  kubectl expose kubernetes 
+ 2005  clear
+ 2006  ls
+ 2007  clear
+ 2008  ls
+ 2009  clear
+ 2010  kubectl get pods
+ 2011  kubectl expose pods mypod2 --type NodePort --target-port=80 --port=1234
+ 2012  kubectl get pods -o wide
+ 2013  kubectl  get svc
+ 2014  kubectl describe  svc mypod2
+ 2015  minikube ip
+ 2016  curl http://192.168.85.2:31002/
+ 2017  history | tail -50
+ 2018  curl http://192.168.85.2:31002/
+ 2019  curl http://192.168.85.2:30358/
+ 2020  clear
+ 2021  ls
+ 2022  clear
+ 2023  cd nodeport/
+ 2024  sl
+ 2025  ls
+ 2026  clear
+ 2027  ls
+ 2028  git status
+ 2029  git add .
+ 2030  git status
+ 2031  git commit
+ 2032  git status
+ 2033  git push
+ 2034  clear
+ 2035  ls
+ 2036  clear
+ 2037  kubectl get pods
+ 2038  kubectl get svc
+ 2039  kubectl get nodes
+ 2040  clear
+ 2041  ls
+ 2042  clear
+ 2043  ls
+ 2044  cp myapp3.yml myapp4.yml
+ 2045  kubectl create -f myapp4.yml 
+ 2046  vim myapp4.yml
+ 2047  kubectl create -f myapp4.yml 
+ 2048  clear
+ 2049  ls
+ 2050  kubectl get pods -o wide
+ 2051  kubectl get svc
+ 2052  minikube ip
+ 2053  curl http://192.168.85.2:30358
+ 2054  clear
+ 2055  ls
+ 2056  clear
+ 2057  minikube ip
+ 2058  kubectl get svc
+ 2059  la
+ 2060  l
+ 2061  cp myapp.yml myapp5.yml
+ 2062  vim myapp5.yml 
+ 2063  git status
+ 2064  kubectl create -f myapp5.yml 
+ 2065  curl http://192.168.85.2:31002
+ 2066  minikube dashboard
+ 2067  clear
+ 2068  history | tail -100
+ 2069  clear
+ 2070  ls
+ 2071  clear
+ 2072  history | tail -100
+
+
+
+---------------------------------------
+
+ 2079  cd ..
+ 2080  ls
+ 2081  clear
+ 2082  git status
+ 2083  git add .
+ 2084  git status
+ 2085  git commit -m "add one folder for the nodeport"
+ 2086  git push
+ 2087  cd nodeport/
+ 2088  ls
+ 2089  clear
+ 2090  ls
+ 2091  clear
+ 2092  ls
+ 2093  clear
+ 2094  la
+ 2095  cp myapp.yml myapp1.yml
+ 2096  ls
+ 2097  vim myapp1.yml 
+ 2098  kubectl  create -f myapp1.yml
+ 2099  kubectl  get pods
+ 2100  kubectl get svc
+ 2101  kubectl expose pods mypod3 --type NodePort --target-port=80 --port=1235
+ 2102  kubectl get svc
+ 2103  curl http://192.168.85.2:30358
+ 2104  ls
+ 2105  git status
+ 2106  git add .
+ 2107  git status
+ 2108  git commit -m "create one more pod and svc"
+ 2109  git push
+ 2110  clear
+ 2111  kubectl get svc
+ 2112  kubectl describe svc mypod3
+ 2113  kubectl get pods -o wide
+ 2114  cp myapp1.yml myapp2.yml
+ 2115  vim myapp2.yml 
+ 2116  git status
+ 2117  kubectl create -f myapp2.yml 
+ 2118  kubectl get pods
+ 2119  kubectl get pods -o wide
+ 2120  kubectl get svc
+ 2121  clear
+ 2122  ls
+ 2123  cp myapp2.yml myapp3.yml
+ 2124  ls
+ 2125  vim myapp3.yml 
+ 2126  kubectl create -f myapp3.yml 
+ 2127  kubectl get pods
+ 2128  kubectl get pods -o wide
+ 2129  kubectl describe svc mypod4
+ 2130  kubectl describe pods mypod4
+ 2131  kubectl get pods -o wide --show-labels
+ 2132  kubectl describe svc mypod3
+ 2133  minikube ip
+ 2134  curl http://192.168.85.2:30358
+ 2135  ls
+ 2136  vim nodeport.txt
+ 2137  git status
+ 2138  git add .
+ 2139  git commit -m "todays learning"
+ 2140  git status
+ 2141  git push
+ 2142  kubectl get pods
+ 2143  kubectl get pods -o wide
+ 2144  kubectl get pods --show-labesl
+ 2145  kubectl get pods --show-labels
+ 2146  ls
+ 2147  kubectl describe svc
+ 2148  ls
+ 2149  kubectl describe svc
+ 2150  kubectl describe svc mypod3
+ 2151  kubectl get pods
+ 2152  kubectl get pods --show-labels
+ 2153  kubectl get rs
+ 2154  clear
+ 2155  ls
+ 2156  clear
+ 2157  git status
+ 2158  clear
+ 2159  ls
+ 2160  clear
+ 2161  kubectl get pods
+ 2162  kubectl get pods -o wide
+ 2163  kubectl get pods --show-labels
+ 2164  kubectl get pods
+ 2165  kubectl get pods --show-labels
+ 2166  kubectl get pods -o wide
+ 2167  clear
+ 2168  ls
+ 2169  git status
+ 2170  git add 
+ 2171  git add .
+ 2172  git commit -m "testing"
+ 2173  git push
+ 2174  ls
+ 2175  cat myapp5.yml 
+ 2176  clear
+
