@@ -22,8 +22,8 @@ jobs:
 
       - name: Apply Kubernetes configurations
         run: |
-          kubectl apply -f mysql-pv.yaml
-          kubectl apply -f wordpress-pv.yaml
+          #          kubectl apply -f mysql-pv.yaml
+          # kubectl apply -f wordpress-pv.yaml
           kubectl apply -f mysql-deployment.yaml
           kubectl apply -f wordpress-deployment.yaml
           kubectl apply -f services.yaml
